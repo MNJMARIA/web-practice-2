@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "header header header"
+    "block2 block3 block4"
+    "block5 block5 block4"
+    "footer footer footer";
+  gap: 10px;
+}
+
+/* -------БЛОКИ-------- */
+
+/* ---------HEADER --------- */
+.block1 { 
+  grid-area: header; 
+  background-color: #b3d9ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+/* Білий контейнер ліворуч */
+.header-inner {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  width: 300px;
+  display: inline-block;
+  text-align: right; /* текст у білому контейнері праворуч */
+}
+
+.block1 h1 {
+  margin: 0;
+}
+
+
+/* Меню */
+.header-menu {
+  margin-left: 40px;
+}
+
+.header-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.header-menu a {
+  text-decoration: none;
+  color: #003366;
+  font-weight: bold;
+  transition: color 0.2s ease;/*плавна зміна кольору*/
+}
+
+.header-menu a:hover {
+  color: #0077cc;
+}
+
+
+
+/* ------- CONTENT ------- */
+.block2 {
+  grid-area: block2;
+  background-color: #ffe6cc;
+  padding: 10px;
+  padding-right: 30px; 
+  padding-left: 30px;
+  text-align: right;
+}
+
+.block3 {
+  grid-area: block3;
+  background-color: #ffffff;
+  padding: 10px;
+  padding-right: 30px; 
+  min-height: 150px;
+  text-align: right;
+}
+
+.block4 {
+  grid-area: block4;
+  background-color: #ffe6cc;
+  padding: 10px;
+  padding-right: 30px; 
+  text-align: right;
+}
+
+.block5 {
+  grid-area: block5;
+  background-color: #e6f2d9;
+  padding: 10px;
+  padding-left: 30px;
+  text-align: center;
+  text-align: left;
+}
+
+
+
+/* --------FOOTER----------- */
+.block6 {
+  grid-area: footer;
+  background-color: #b3d9ff;
+  padding: 15px 30px;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Білий контейнер зліва */
+.footer-inner {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  width: 300px; /* у 2 рази ширше за текст приблизно */
+  text-align: left;
+}
+
+/* Список контактів праворуч */
+.footer-info {
+  text-align: right;
+}
+
+.footer-info ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+.footer-info li {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+
+
+
+/* Адаптація під вузький екран  */
+@media (max-width: 700px) {
+  .block1 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .block6 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-info ul {
+    text-align: left;
+  }
+}
