@@ -143,8 +143,79 @@ body {
 
 
 
+
+
+
+/* GALLERY  - PAGE3 */
+.gallery {
+  display: flex;
+  flex-wrap: wrap; /* дозволяє фото переноситися на новий ряд */
+  gap: 40px; /* відстань між фото */
+  justify-content: center;  /* вирівнювання по центру */
+  margin-top: 20px;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;   /* фото над підписом */
+  align-items: center;
+  margin: 0;
+}
+
+/* Контейнер для фото */
+.photo-container {
+  width: 300px;
+  height: 300px; /* фіксована висота для однакової сітки */
+  background-color: black;  /* чорний фон для заповнення*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* приховує зайве, щоб не вилазило за межі */
+  border-radius: 8px;
+}
+
+/* Саме зображення */
+.photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;      
+  /*contain масштабує фото повністю в контейнер, не обрізаючи - фон чорний, тому навколо фото будуть чорні поля */
+}
+
+/* Підпис під фото */
+figcaption {
+  width: 300px;
+  height: 35px;
+  background-color: #ccc;
+  color: #000;
+  display: flex;
+  justify-content: center; /* текст по центру горизонтально */
+  align-items: center; /* і вертикально */
+  border-radius: 0 0 8px 8px;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+
+
+.right-aligned-list {
+    text-align: right;
+    list-style-position: inside; /* Крапки теж праворуч */
+    padding-right: 0;
+}
+
+.right-aligned-list li {
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+
+
+
+
+
 /* Адаптація під вузький екран  */
-@media (max-width: 700px) {
+/*@media (max-width: 700px) {
   .block1 {
     flex-direction: column;
     align-items: center;
@@ -163,5 +234,79 @@ body {
 
   .footer-info ul {
     text-align: left;
+  }
+}*/
+
+
+/* Для мобільних пристроїв */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "block2"
+      "block3"
+      "block4"
+      "block5"
+      "footer";
+  }
+  
+  .block1 {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .header-inner {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .header-menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .block6 {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .footer-inner {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .footer-info ul {
+    text-align: center;
+  }
+  
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .photo-container,
+  figcaption {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Для дуже маленьких екранів */
+@media (max-width: 480px) {
+  .block1,
+  .block2,
+  .block3,
+  .block4,
+  .block5,
+  .block6 {
+    padding: 15px;
+  }
+  
+  .block1 h1 {
+    font-size: 1.5em;
   }
 }
