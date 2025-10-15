@@ -1,0 +1,348 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ------- HEADER ------- */
+.block1 {
+  background-color: #b3d9ff;
+  padding: 10px 30px;
+  overflow: hidden;
+}
+
+.header-top {
+  /* display: flex; */
+  /* justify-content: space-between;
+  align-items: center; */
+
+  overflow: hidden;
+}
+
+.header-left {
+  background-color: #fff;
+  padding: 10px 20px;
+  width: 300px;
+  text-align: right;
+
+  float: left;
+}
+
+.header-right {
+  float: right;
+}
+
+.header-right ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* display: flex; */
+
+}
+
+.header-right li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.header-right a {
+  text-decoration: none;
+  color: #003366;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.header-right a:hover {
+  color: #0077cc;
+}
+
+/* ------- MAIN CONTENT ------- */
+.container {
+  /* display: flex;
+  flex-direction: column; */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.content-wrapper {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  overflow: hidden;
+
+  height: 600px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Верхня частина з 3 колонками */
+.content-wrapper-left {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: stretch; */
+
+  overflow: hidden;
+}
+
+.content-wrapper-left-above {
+  /* display: flex; */
+  width: calc(75% - 10px);
+  /* flex-direction: column; */
+
+  float: left;
+  box-sizing: border-box;
+      height: 100%;
+    overflow-y: auto;
+    margin-right: 10px;
+}
+
+.content-wrapper-right {
+  /* display: flex; */
+  width: 25%;
+
+  float: right;
+
+  height: 100%;
+}
+
+
+
+/* Нижня частина з block5 і block4 */
+.content-bottom {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: stretch; */
+  
+
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+
+/* ------- BLOCK STYLES ------- */
+/* .block2, .block3, .block4, .block5 {
+  box-sizing: border-box;
+  padding: 15px 20px;
+} */
+
+
+.block2 {
+  background-color: #ffe6cc;
+  width: 35%;
+  text-align: right;
+
+  float: left;
+  margin-right: 10px;
+  box-sizing: border-box;
+  padding: 15px 20px;
+
+  overflow-y: auto;
+    margin-bottom: 10px;
+    height: 100%;
+}
+
+.block3 {
+  background-color: #fff;
+  width: 63%;
+  text-align: right;
+
+  float: left;
+  margin-right: 10px;
+  box-sizing: border-box;
+  padding: 15px 20px;
+
+      overflow-y: auto;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+.block4 {
+  background-color: #ffe6cc;
+  text-align: right;
+  /* display: flex;
+  flex-direction: column; */
+
+  float: right;
+  box-sizing: border-box;
+  padding: 15px 20px;
+
+  overflow-y: auto;
+    height: 100%;
+}
+
+/* ------- SECTION ------- */
+.block5 {
+  background-color: #e6f2d9;
+  width: 100%;
+  text-align: left;
+
+  float: left;
+  box-sizing: border-box;
+  padding: 15px 20px;
+}
+
+
+/* ------- FOOTER ------- */
+.block6 {
+  background-color: #b3d9ff;
+  padding: 15px 30px;
+  /* align-items: center; */
+
+  overflow: hidden;
+}
+
+.footer-top {
+  /* display: flex; */
+  /* justify-content: space-between;
+  align-items: center; */
+
+  overflow: hidden;
+}
+
+.footer-left {
+  background-color: #fff;
+  padding: 10px 20px;
+  width: 300px;
+  text-align: left;
+
+  float: left;
+}
+
+.footer-right {
+  vertical-align: middle;
+
+  float: right;
+}
+
+.footer-right ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+.footer-right li {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+/* ------- Адаптація для мобільних ------- */
+@media (max-width: 768px) {
+
+  /* Контейнер і контент */
+  .container {
+    /* display: flex;
+    flex-direction: column; */
+    gap: 15px;
+  }
+
+  /* Хедер */
+  .block1 {
+    /* display: flex;
+    flex-direction: column; */
+    
+    text-align: center;
+    padding: 15px;
+  }
+
+  .header-top {
+    /* flex-direction: column; */
+    /* align-items: center; */
+    
+    text-align: center;
+  }
+
+  .header-left {
+    width: 100%;
+    text-align: center;
+
+    float: none;
+    margin-bottom: 10px;
+  }
+
+  .header-right {
+    float: none;
+  }
+
+  .header-right ul {
+    /* flex-direction: column; */
+    
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  .header-right li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  /* Основний контент */
+  .content-wrapper-left-above,
+  .content-wrapper-right,
+  .content-bottom {
+    /* flex-direction: column; */
+    /* align-items: center; */
+
+    width: 100%;
+    float: none;
+    margin-bottom: 15px;
+  }
+
+  .block2,
+  .block3,
+  .block4,
+  .block5 {
+    width: 100%;
+    text-align: right;
+    float: none;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .block5 {
+    text-align: left;
+  }
+
+  /* Футер */
+  .block6 {
+    text-align: center;
+    padding: 15px;
+  }
+
+  .footer-top {
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    text-align: center;
+    float: none;
+    margin-bottom: 10px;
+  }
+
+  .footer-right ul {
+    text-align: center;
+    padding: 0;
+  }
+}
+
+/* ------- Адаптація для дуже маленьких екранів ------- */
+@media (max-width: 480px) {
+  .block1,
+  .block2,
+  .block3,
+  .block4,
+  .block5,
+  .block6 {
+    padding: 15px;
+  }
+
+  .block1 h1 {
+    font-size: 1.5em;
+  }
+
+  .footer-right li {
+    font-size: 14px;
+  }
+}
+
